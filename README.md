@@ -1,6 +1,7 @@
 # Hacks-Linux <span style="font-size: 100px">&#129497;&#127997;</span>
-Breves comando muito úteis do Linux
-Veja mais no arq shell
+Breves comando muito úteis do Linux.
+
+##### Veja mais no arq __shell.md__ <span>&#128072;&#127998;</span><br/> 
 
 # Aprendizados Básicos de Linux (Comandos) :books:
 
