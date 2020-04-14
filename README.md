@@ -1,5 +1,6 @@
-# Hacks-Linux
+# Hacks-Linux <span style="font-size: 100px">&#129497;&#127997;</span>
 Breves comando muito úteis do Linux
+Veja mais no arq shell
 
 # Aprendizados Básicos de Linux (Comandos) :books:
 
