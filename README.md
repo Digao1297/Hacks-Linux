@@ -131,7 +131,7 @@ _Idéia de termos vários ambientes de desenvolvimento em cima de variáveis do 
 _Persistindo no .bashrc:_
 
 ```
-	 $ . $HOME/.asdf/asdf.sh
+     $ . $HOME/.asdf/asdf.sh
      $ echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
      $ echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 
@@ -141,9 +141,9 @@ _Se o procedimento ocorreu de forma correta o comando ```$ asdf``` estará dispo
 
 #### Comando ASDF:
 	- O ```$ asdf plugin-list``` irá listar todas os plugins intalados no seu Host;
-	- O ```$ asdf list-all nome da linguagem (plugin)``` irá listar todas as versões 				  disponíveis do mesmo;
+	- O ```$ asdf list-all nome da linguagem (plugin)``` irá listar todas as versões 				 disponíveis do mesmo;
 	- O ```$ asdf install 'plugin' 1.0.0``` irá instalar plugins na versão passada;
-	- O ```$ asdf global 'plugin' 1.0.0``` irá tornar essa versão do plugins uma versão 			  universal do Host;
+	- O ```$ asdf global 'plugin' 1.0.0``` irá tornar essa versão do plugins uma versão universal do Host;
 	- O ```$ asdf plugin-update --all``` irá atualizar todos os plugins intalados no seu Host;
 	- O ```$ asdf update ``` irá atualizar o asdf;
 	
@@ -156,15 +156,15 @@ _Breve intalação e configuração do Docker;_
 #### Instalação:
 	- O ```$ sudo apt-get remove docker docker-engine docker.io containerd runc ``` removerá qualquer versão do Docker já existente ;
 	- O ```$ sudo apt-get update``` atualize seus repósitorios;
-	- O ```$ sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent   			  software-properties-common ``` instalação de alguns pacotes de dependências;
-	- O ```$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -``` 		  adicionar a key;
+	- O ```$ sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common ``` instalação de alguns pacotes de dependências;
+	- O ```$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -``` adicionar a key;
 	- O ```$ sudo apt-key fingerprint 0EBFCD88 ``` adicionar a key;
-	- O ```$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/			  ubuntu \
+	- O ```$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ ubuntu \
       $(lsb_release -cs) \
       stable" ``` adicione o repositório;
 	- O ```$ sudo apt-get update ``` atualize o mesmo;
 	- O ```$ sudo apt-get install docker-ce docker-ce-cli containerd.io``` instale o Docker;
-	- O ```$ sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.3/ctop-0.7.3-			  linux-amd64 -O /usr/local/bin/ctop``` FERRAMENTA CTOP para regerencia de containers;
+	- O ```$ sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.3/ctop-0.7.3-linux-amd64 -O /usr/local/bin/ctop``` FERRAMENTA CTOP para regerencia de containers;
 	- O ```$ sudo chmod +x /usr/local/bin/ctop``` permissões da ferramenta;
 		- O comando ```$ sudo ctop``` estará disponivel;
 	- O ```$ sudo usermod -aG docker $USER``` ira confirugara regras de __user__ do docker._
