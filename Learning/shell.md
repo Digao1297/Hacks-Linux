@@ -110,3 +110,78 @@ _Vamos 'criar/tocar' um arquivo com o comando: ```$ touch arq.txt``` no diretór
 _Todo texto que for redigido ao __arq.txt__ usando o precedimento (anterior) acima irá sobreescrever o texto já existente, é não adiciona-lo ao mesmo, para tal feito podemos utilizar a estratégia a seguir:_
 
 - ```$ echo "Outro texto qualquer" >> arq.txt``` escreva o texto no arquivo criado anteriormente sem sobreescrever o que já se encontra no mesmo.
+
+#### PROCURE PELA DOCUMENTAÇÃO ATUALIZADA PARA REALIZAR A INSTALAÇÃO DE FORMA CORRETA, A INTENÇãO AQUI E SÓ MOSTRAR O PRECEDIMENTO, POR ISSO OS COMANDO QUE USEI AQUI NO DOCUMENTO COMO UM TODO PODEM ESTAR DESATUALIZADOS.
+
+
+# ASDF-VM Ambientes de Desenvolvimento
+
+_Idéia de termos vários ambientes de desenvolvimento em cima de variáveis do shell, nós possibilita termos várias verções de uma mesma tecnologia em um determinado Host._
+
+#### Instalação:
+
+```
+	$ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.8
+
+	$ git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+	$ cd ~/.asdf
+	$ git checkout "$(git describe --abbrev=0 --tags)"
+```
+
+_Persistindo no .bashrc:_
+
+```
+	 $ . $HOME/.asdf/asdf.sh
+     $ echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+     $ echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
+
+``` 
+
+_Se o procedimento ocorreu de forma correta o comando ```$ asdf``` estará disponivel, instale os plugins (que são a grosso modo como um super-set) de cada linguagem. Ex.: ``` $ asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git``` serve o nodeJS._
+
+#### Comando ASDF:
+	- O ```$ asdf plugin-list``` irá listar todas os plugins intalados no seu Host;
+	- O ```$ asdf list-all nome da linguagem (plugin)``` irá listar todas as versões 				  disponíveis do mesmo;
+	- O ```$ asdf install 'plugin' 1.0.0``` irá instalar plugins na versão passada;
+	- O ```$ asdf global 'plugin' 1.0.0``` irá tornar essa versão do plugins uma versão 			  universal do Host;
+	- O ```$ asdf plugin-update --all``` irá atualizar todos os plugins intalados no seu Host;
+	- O ```$ asdf update ``` irá atualizar o asdf;
+	
+
+# Docker instalação
+
+_Breve intalação e configuração do Docker;_
+
+
+#### Instalação:
+	- O ```$ sudo apt-get remove docker docker-engine docker.io containerd runc ``` removerá qualquer versão do Docker já existente ;
+	- O ```$ sudo apt-get update``` atualize seus repósitorios;
+	- O ```$ sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent   			  software-properties-common ``` instalação de alguns pacotes de dependências;
+	- O ```$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -``` 		  adicionar a key;
+	- O ```$ sudo apt-key fingerprint 0EBFCD88 ``` adicionar a key;
+	- O ```$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/			  ubuntu \
+      $(lsb_release -cs) \
+      stable" ``` adicione o repositório;
+	- O ```$ sudo apt-get update ``` atualize o mesmo;
+	- O ```$ sudo apt-get install docker-ce docker-ce-cli containerd.io``` instale o Docker;
+	- O ```$ sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.3/ctop-0.7.3-			  linux-amd64 -O /usr/local/bin/ctop``` FERRAMENTA CTOP para regerencia de containers;
+	- O ```$ sudo chmod +x /usr/local/bin/ctop``` permissões da ferramenta;
+		- O comando ```$ sudo ctop``` estará disponivel;
+	- O ```$ sudo usermod -aG docker $USER``` ira confirugara regras de __user__ do docker._
+	
+# Geração de chave SSH (TOME CUIDADO COM SUA CHAVE PRIVADA NÃO COMPARTILHE A MESMA COM NINGUÉM)
+
+_Se você não entende o siginificado do mesmo indico fortemente a estudar sobre o assunto ante de continuar com a geração da Key;_
+
+__Criando arquivos:__
+```
+$ ssh-keygen -o -a 100 -t  ed25519 -f ~/.ssh/id_ed25519 -C "seu email"
+$ eval "$(ssh-agent -s)"
+
+```
+_A pasta com a doc. com o par de key's se encontra no diretório: ```$ ls ~/.ssh``` faça bom uso e toma cuidado, não compartilhe sua chave privada, faça backup da mesma_
+__Adicione a Key:__
+```
+$ ssh-add ~/.ssh/id_da_key_privada
+```
+_para facilitar a indentificação adicionei a minha key privada_
