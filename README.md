@@ -171,7 +171,7 @@ _Breve intalação e configuração do Docker;_
 	
 ### Exemplo Postgres Docker 
 - O ```$ sudo docker pull postgres``` img do Postgres;
-- O ```$ sudo docker run --name server -e POSTGRES_PASSWORD=cicada3301 -p 5432:5432 -d postgres:12.2``` irá criar uma insrância do Postgres configurando porta, nome e senha de um DB Potgres;
+- O ```$ sudo docker run --name nome_DB -e POSTGRES_PASSWORD=senha -p 5432:5432 -d postgres:12.2``` irá criar uma insrância do Postgres configurando porta, nome e senha de um DB Potgres;
 	
 # Geração de chave SSH (TOME CUIDADO COM SUA CHAVE PRIVADA NÃO COMPARTILHE A MESMA COM NINGUÉM)
 
