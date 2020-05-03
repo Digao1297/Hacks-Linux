@@ -169,6 +169,10 @@ _Breve intalação e configuração do Docker;_
 		- O comando ```$ sudo ctop``` estará disponivel;
 	- O ```$ sudo usermod -aG docker $USER``` ira confirugara regras de __user__ do docker._
 	
+### Exemplo Postgres Docker 
+- O ```$ sudo docker pull postgres``` img do Postgres;
+- O ```$ sudo docker run --name server -e POSTGRES_PASSWORD=cicada3301 -p 5432:5432 -d postgres:12.2``` irá criar uma insrância do Postgres configurando porta, nome e senha de um DB Potgres;
+	
 # Geração de chave SSH (TOME CUIDADO COM SUA CHAVE PRIVADA NÃO COMPARTILHE A MESMA COM NINGUÉM)
 
 _Se você não entende o siginificado do mesmo indico fortemente a estudar sobre o assunto ante de continuar com a geração da Key;_
